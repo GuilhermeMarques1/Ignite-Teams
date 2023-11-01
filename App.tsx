@@ -5,9 +5,7 @@ import { ThemeProvider } from "styled-components/native";
 import theme from "@theme/index";
 
 import { Loading } from '@components/Loading';
-import { Groups } from "@screens/Groups";
-import { NewGroup } from '@screens/NewGroup';
-import { Players } from '@screens/Players';
+import { Routes } from '@routes/index';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -23,7 +21,7 @@ export default function App() {
         translucent
       />
       {
-        fontsLoaded ? <Players /> : <Loading />
+        fontsLoaded ? <Routes /> : <Loading />
       }
     </ThemeProvider>
   );
